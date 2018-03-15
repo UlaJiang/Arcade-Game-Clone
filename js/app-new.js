@@ -1,14 +1,6 @@
-const CELL_WIDTH = 100;
-const CELL_HEIGHT = 83;
 
-/**
-* @description Game
-* @constructor
-* @param {number} x - 横坐标
-* @param {number} x - 纵坐标
-*/
 class Game {
-    constructor (x, y, sprite) {
+    constructor (x, y) {
         this.x = x;
         this.y = y;
         this.sprite = sprite;
@@ -16,24 +8,24 @@ class Game {
 
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-
     }
+
 }
+
 /**
 * @description Enemy类
 * @constructor
 * @param {number} x - 敌人位置横坐标
 * @param {number} x - 敌人位置纵坐标
 */
-class Enemy extends Game {
+class Enemy extends Game{
     
-    constructor (x, y, sprite, speed) {
-        super(x, y, sprite)
-        //this.x = -10;
-        //this.y = 60 + 85 * Math.floor(Math.random() * 3);
+    constructor (x, y) {
+        this.x = -10;
+        this.y = 60 + 85 * Math.floor(Math.random() * 3);
         this.speed = (Math.random()+1) * 150;
     // 敌人的图片
-        //this.sprite = 'images/enemy-bug.png';
+        this.sprite = 'images/enemy-bug.png';
     }
 
     // 更新敌人的位置，dt：时间间隙
@@ -56,11 +48,10 @@ class Enemy extends Game {
     }
 
     //在屏幕上画出敌人，
-    // render() {
-    //     super.render();
-    // }
+    render() {
+        super.render();
+    }
 }
-
 
 /**
 * @description Player
@@ -68,14 +59,12 @@ class Enemy extends Game {
 * @param {number} x - 玩家位置横坐标
 * @param {number} x - 玩家位置纵坐标
 */
-class Player extends Game {
-
-    constructor (x, y, sprite) {
-        super(x, y, sprite);
-        //this.x = 200;
-        //this.y = 410;
+class Player extends Game{
+    constructor(x, y) {
+        this.x = 200;
+        this.y = 410;
     // 玩家的图片
-        //this.sprite = 'images/char-boy.png';
+        this.sprite = 'images/char-boy.png';
     }
 
     update() {
@@ -83,18 +72,19 @@ class Player extends Game {
         if (this.y < 70) {
             alert('Congratulations, you win the game!');
             this.reset();
-        }
+    
         //控制玩家在指定的范围内移动，超出范围都会重置游戏
         if( this.x > 400 || this.x < 0 || this.y > 410){
             this.reset();
         }
     }
 
-    // render() {
-    //     super.render();
-    // }
+    render() {
+        super.render();
+    }
     
- 
+    const CELL_WIDTH = 100;
+    const CELL_HEIGHT = 83;
     //处理玩家按上下左右键的时候位置移动
     handleInput(num) {
         if (num === 'up'){
@@ -124,16 +114,17 @@ class Player extends Game {
 }
 
 
+
 // 实例化所有Enemy对象
 var allEnemies = new Array();
 
 //每隔一秒生成一个新的enemy对象，把该对象都放进一个叫 allEnemies 的数组里面
 setInterval(function(){
-        var enemy = new Enemy(-10, 60 + 85 * Math.floor(Math.random() * 3), 'images/enemy-bug.png');
+        var enemy = new Enemy();
         allEnemies.push(enemy);
 }, 1000);
 
-var player = new Player(200, 410, 'images/char-boy.png');
+var player = new Player();
 
 // 这段代码监听游戏玩家的键盘点击事件并且代表将按键的关键数字送到 Player.handleInput()
 // 方法里面。你不需要再更改这段代码了。
