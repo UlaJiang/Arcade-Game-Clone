@@ -3,7 +3,6 @@
 
 ![alt text](https://s3-ap-southeast-2.amazonaws.com/test-avatar/AG.png)
 
-
 前端纳米学位街机游戏克隆项目作业
 author：ulajiang
 
