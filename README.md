@@ -3,32 +3,28 @@
 
 ![alt text](https://s3-ap-southeast-2.amazonaws.com/test-avatar/AG.png)
 
-前端纳米学位街机游戏克隆项目作业
+Front-end nano-degree arcade game clone project operation
 author：ulajiang
 
-=============== 游戏功能 =================
+=============== Game Features =================
 
-1.在此游戏中有玩家和敌人 (小虫)
-2.玩家的目标是抵达水域，并且不会撞到任何其他敌人
-3.玩家可以上下左右移动
-4.敌人在场景中的道路上移动速度变化不一
-5.一旦玩家撞到敌人，游戏就会重置，并且玩家返回起始方框
-6.玩家抵达水域后，游戏胜利。
+1. There are players and enemies in this game. 
+2. The player's goal is to reach the waters and not hit any other enemies. 
+3. Players can move up and down and left and right. 
+4. The speed of enemy moves in the scene is randomly varied. 
+5. Once the player hits the enemy, the game resets and the player returns to the start box.
+6. After the player arrives in the water, the game wins.
 
+=============== Components  ==================
 
-=============== 组成部分 ==================
+1. app.js implements the main functions of the game's character, such as the movement of the player's position, the movement of the enemy's position, the judgment of the game's win or loss, etc.
+2. engine.js provides the game loop play features, such as updating the enemy and constantly drawing the entire game screen
+3. resource.js provides image loading tool
 
-1. app.js实现了游戏的角色的主要功能，如玩家位置的移动，敌人位置的移动，游戏输赢的判断等
-2. engine.js提供了游戏循环玩耍的功能，如更新敌人和不断绘制整个游戏屏幕
-3. resource.js提供了图片加载工具
+================ Start the game ==================
 
+Double-click index.html to open the game interface. The up, down, left and right buttons of the keyboard are used to control the player's position.
 
-================ 开始游戏 ==================
+================ Project Resources ==================
 
-双击index.html即可打开游戏界面，键盘的上下左右键用于控制玩家的位置
-
-
-================ 项目资源 ==================
-
-engine.js, resource.js, index.html, style.css由优达学院提供
-app.js由我实现
+engine.js, resource.js, index.html, style.css provided by Uda Academy and app.js is reliazed by me.
