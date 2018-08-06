@@ -1,7 +1,7 @@
 # A web page game based on JS, HTML and CSS
 #### The player controls a boy to cross the river, and try to avoid insects.
 
-![alt text](https://s3-ap-southeast-2.amazonaws.com/test-avatar/AG.png)
+![alt text](https://s3-ap-southeast-2.amazonaws.com/test-avatar/Screen+Shot+2018-08-07+at+09.36.53.png)
 
 Front-end nano-degree arcade game clone project operation
 author：ulajiang
