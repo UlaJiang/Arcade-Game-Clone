@@ -1,3 +1,8 @@
+# A web page game based on JS, HTML and CSS
+#### The player controls a boy to cross the river, and try to avoid insects.
+
+![alt text](https://s3-ap-southeast-2.amazonaws.com/test-avatar/AG.png)
+
 
 前端纳米学位街机游戏克隆项目作业
 author：ulajiang
